@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: client-pod
+  labels: 
+    component: web # component doesn't matter, can be called anything...just a dumb label used to link the pod to the service
+spec:
+  containers:
+    - name: client
+      image: valdiz777/multi-client
+      ports:
+        - containerPort: 3000
